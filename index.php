@@ -18,7 +18,10 @@ if ($_SERVER['REQUEST_URI'] == '/') {
     }
 }
 
+if ($Page == 'index' and $Module == 'index') echo 'Главная страница';
+else if ($Page == 'photo') echo 'Фотогаллерея';
 
 
 
-?>
+
+
