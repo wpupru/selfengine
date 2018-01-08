@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_URI'] == '/') {
     $Page = array_shift($URL_Parts);
     $Module = array_shift($URL_Parts);
 
-    if (empty($Module)) {
+    if (!empty($Module)) {
         $Param = array();
-        for ($i = 0;$i < count($URL_Parts); $i++){
+        for ($i = 0; $i < count($URL_Parts); $i++){
             $Param[$URL_Parts[$i]] = $URL_Parts[++$i];
         }
     }
@@ -22,6 +22,4 @@ if ($Page == 'index' and $Module == 'index') echo 'Главная страниц
 else if ($Page == 'photo') echo 'Фотогаллерея';
 
 
-
-
-
+?>
